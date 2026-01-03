@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Your Service - Home</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" style="text-decoration: none; color: inherit;">
+      <div class="logo">BookYour<span>Service</span></div>
+    </a>
+
+    <div class="nav-right" style="display: flex; align-items: center; gap: 25px;">
+      
+      <div class="location-box">
+        <i class="fa-solid fa-location-dot"></i>
+        <select id="userLocation" onchange="updateLocation()">
+          <option value="all">Select Location</option>
+          <option value="rewa-city">Rewa City</option>
+          <option value="civil-lines">Civil Lines</option>
+          <option value="university-road">University Road</option>
+          <option value="sirmaur-chowk">Sirmaur Chowk</option>
+        </select>
+      </div>
+
+      <ul class="nav-icons">
+        <li>
+          <a href="index.html" class="icon-link" title="Home">
+            <i class="fa-solid fa-house"></i>
+          </a>
+        </li>
+        <li>
+          <a href="login.html" class="icon-link" title="Login">
+            <i class="fa-solid fa-user"></i>
+          </a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="hero-animate">Expert Local Services <br> <span class="highlight">at Your Doorstep</span></h1>
+      <p class="hero-animate-delay">Electrician, Plumber, Salon, Cleaning & More</p>
+      
+      <div class="search-container">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" id="searchInput" placeholder="Search for 'AC Service' or 'Plumber'..." onkeypress="handleEnter(event)">
+        <button class="search-btn" onclick="performSearch()">Search</button>
+      </div>
+
+      <div style="margin-top: 30px;">
+        <a href="categories.html">
+          <button class="primary-btn">Explore Categories</button>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="popular-section">
+    <h2>Most Booked Services</h2>
+    <p class="subtitle">Recommended by your neighbors</p>
+    
+    <div class="popular-grid">
+      <div class="pop-card" onclick="window.location.href='services.html?category=AC Service'">
+        <div class="pop-image" style="background-image: url('images/appliance.jpg');">
+            <span class="rating-badge"><i class="fa-solid fa-star"></i> 4.8</span>
+        </div>
+        <div class="pop-content">
+            <h3>AC Service</h3>
+            <p>Cleaning & Gas Refill</p>
+            <div class="price-row">
+                <span class="price">₹599</span>
+                <span class="btn-text">Book ></span>
+            </div>
+        </div>
+      </div>
+
+      <div class="pop-card" onclick="window.location.href='services.html?category=Men\'s Haircut'">
+        <div class="pop-image" style="background-image: url('https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=600&q=80');">
+            <span class="rating-badge"><i class="fa-solid fa-star"></i> 4.9</span>
+        </div>
+        <div class="pop-content">
+            <h3>Men's Haircut</h3>
+            <p>Grooming & Massage</p>
+            <div class="price-row">
+                <span class="price">₹199</span>
+                <span class="btn-text">Book ></span>
+            </div>
+        </div>
+      </div>
+
+      <div class="pop-card" onclick="window.location.href='services.html?category=Bathroom Cleaning'">
+        <div class="pop-image" style="background-image: url('images/bathroom-cleaning.jpg');">
+            <span class="rating-badge"><i class="fa-solid fa-star"></i> 4.7</span>
+        </div>
+        <div class="pop-content">
+            <h3>Bathroom Cleaning</h3>
+            <p>Deep Clean & Disinfect</p>
+            <div class="price-row">
+                <span class="price">₹399</span>
+                <span class="btn-text">Book ></span>
+            </div>
+        </div>
+      </div>
+
+      <div class="pop-card" onclick="window.location.href='services.html?category=Electrician'">
+        <div class="pop-image" style="background-image: url('images/home-repair.jpg');">
+            <span class="rating-badge"><i class="fa-solid fa-star"></i> 4.6</span>
+        </div>
+        <div class="pop-content">
+            <h3>Electrician</h3>
+            <p>Fan & Switch Repair</p>
+            <div class="price-row">
+                <span class="price">₹99</span>
+                <span class="btn-text">Book ></span>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="how-it-works">
+    <h2>How BookYourService Works</h2>
+    <p class="subtitle">3 Simple Steps to get your work done</p>
+    
+    <div class="steps-container">
+      <div class="step-box">
+        <div class="step-icon">
+          <i class="fa-solid fa-calendar-check"></i>
+        </div>
+        <h3>1. Book Online</h3>
+        <p>Search for a service and choose your preferred time slot in seconds.</p>
+      </div>
+
+      <div class="step-box">
+        <div class="step-icon">
+          <i class="fa-solid fa-laptop-code"></i>
+        </div>
+        <h3>2. Get Details</h3>
+        <p>Get booking confirmation and provider details right here on the website.</p>
+      </div>
+
+      <div class="step-box">
+        <div class="step-icon">
+          <i class="fa-solid fa-hand-holding-dollar"></i>
+        </div>
+        <h3>3. Pay After Work</h3>
+        <p>Pay safely after the service is completed to your satisfaction.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 BookYour<span>Service</span>. Made by BookYourService Team.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Service |  BookYourService</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+ <nav class="navbar">
+    <a href="index.html" style="text-decoration: none; color: inherit;">
+      <div class="logo">BookYour<span>Service</span></div>
+    </a>
+
+    <div class="nav-right" style="display: flex; align-items: center; gap: 25px;">
+      
+      <div class="location-box">
+        <i class="fa-solid fa-location-dot"></i>
+        <select id="userLocation" onchange="updateLocation()">
+          <option value="all">Select Location</option>
+          <option value="rewa-city">Rewa City</option>
+          <option value="civil-lines">Civil Lines</option>
+          <option value="university-road">University Road</option>
+          <option value="sirmaur-chowk">Sirmaur Chowk</option>
+        </select>
+      </div>
+
+      <ul class="nav-icons">
+        <li>
+          <a href="index.html" class="icon-link" title="Home">
+            <i class="fa-solid fa-house"></i>
+          </a>
+        </li>
+        <li>
+          <a href="login.html" class="icon-link" title="Login">
+            <i class="fa-solid fa-user"></i>
+          </a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+  <div class="provider-container">
+    <a href="categories.html" style="color: #a855f7; text-decoration: none;">&larr; Back to Main Categories</a>
+    <h2 class="page-title" id="groupTitle">Select Specific Service</h2>
+    
+    <div class="category-grid" id="subGrid"></div>
+  </div>
+
+  <script src="js/subcategories.js"></script>
+</body>
+</html>

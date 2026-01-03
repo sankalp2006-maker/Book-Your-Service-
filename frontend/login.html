@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | BookYourService</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" style="text-decoration: none; color: inherit;">
+      <div class="logo">BookYour<span>Service</span></div>
+    </a>
+
+    <div class="nav-right" style="display: flex; align-items: center; gap: 25px;">
+      
+      <div class="location-box">
+        <i class="fa-solid fa-location-dot"></i>
+        <select id="userLocation" onchange="updateLocation()">
+          <option value="all">Select Location</option>
+          <option value="rewa-city">Rewa City</option>
+          <option value="civil-lines">Civil Lines</option>
+          <option value="university-road">University Road</option>
+          <option value="sirmaur-chowk">Sirmaur Chowk</option>
+        </select>
+      </div>
+
+      <ul class="nav-icons">
+        <li>
+          <a href="index.html" class="icon-link" title="Home">
+            <i class="fa-solid fa-house"></i>
+          </a>
+        </li>
+        <li>
+          <a href="login.html" class="icon-link" title="Login">
+            <i class="fa-solid fa-user"></i>
+          </a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <div class="login-page">
+    <div class="form-box">
+      
+      <div class="button-box">
+        <div id="btn"></div> <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+        <button type="button" class="toggle-btn" onclick="register()">Sign Up</button>
+      </div>
+
+      <div class="social-icons">
+        <i class="fa-brands fa-google"></i>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+      </div>
+
+      <form id="login" class="input-group">
+        <input type="text" class="input-field" placeholder="User ID / Email" required>
+        <input type="password" class="input-field" placeholder="Enter Password" required>
+        <input type="checkbox" class="check-box"><span>Remember Password</span>
+        <button type="submit" class="submit-btn">Log In</button>
+      </form>
+
+      <form id="register" class="input-group">
+        <input type="text" class="input-field" placeholder="Full Name" required>
+        <input type="email" class="input-field" placeholder="Email Id" required>
+        <input type="password" class="input-field" placeholder="Create Password" required>
+        <button type="submit" class="submit-btn">Register</button>
+      </form>
+
+    </div>
+  </div>
+
+  <script src="js/login.js"></script>
+</body>
+</html>

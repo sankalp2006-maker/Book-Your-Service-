@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Category | BookYourService</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+ <nav class="navbar">
+    <a href="index.html" style="text-decoration: none; color: inherit;">
+      <div class="logo">BookYour<span>Service</span></div>
+    </a>
+
+    <div class="nav-right" style="display: flex; align-items: center; gap: 25px;">
+      
+      <div class="location-box">
+        <i class="fa-solid fa-location-dot"></i>
+        <select id="userLocation" onchange="updateLocation()">
+          <option value="all">Select Location</option>
+          <option value="rewa-city">Rewa City</option>
+          <option value="civil-lines">Civil Lines</option>
+          <option value="university-road">University Road</option>
+          <option value="sirmaur-chowk">Sirmaur Chowk</option>
+        </select>
+      </div>
+
+      <ul class="nav-icons">
+        <li>
+          <a href="index.html" class="icon-link" title="Home">
+            <i class="fa-solid fa-house"></i>
+          </a>
+        </li>
+        <li>
+          <a href="login.html" class="icon-link" title="Login">
+            <i class="fa-solid fa-user"></i>
+          </a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <h2 class="page-title">What are you looking for?</h2>
+
+ <div class="category-grid">
+    
+    <div class="card image-card" onclick="goToSubcategory('Repairs')">
+      <div class="card-image" style="background-image: url('images/home-repair.jpg');"></div>
+      <div class="card-content">
+        <h3>Home Repairs</h3>
+        <p>Electrician, Plumber, Carpenter</p>
+      </div>
+    </div>
+
+    <div class="card image-card" onclick="goToSubcategory('Appliances')">
+      <div class="card-image" style="background-image: url('images/appliance.jpg');"></div>
+      <div class="card-content">
+        <h3>Appliance Service</h3>
+        <p>AC, Washing Machine, RO</p>
+      </div>
+    </div>
+
+    <div class="card image-card" onclick="goToSubcategory('Doorstep')">
+      <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=600&q=80');"></div>
+      <div class="card-content">
+        <h3>Doorstep Helper</h3>
+        <p>Maid, Milkman, Dry Cleaner</p>
+      </div>
+    </div>
+
+   <div class="card image-card" onclick="goToSubcategory('Salon')">
+      <div class="card-image" style="background-image: url('images/women-salon.jpg');"></div>
+      <div class="card-content">
+        <h3>Women's Salon</h3>
+        <p>Haircut, Makeup, Facials</p>
+      </div>
+    </div>
+    <div class="card image-card" onclick="goToSubcategory('MensSalon')">
+      <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&q=80');"></div>
+      <div class="card-content">
+        <h3>Men's Salon</h3>
+        <p>Haircut, Shaving, Grooming</p>
+      </div>
+    </div>
+
+    <div class="card image-card" onclick="goToSubcategory('Cleaning')">
+      <div class="card-image" style="background-image: url('images/cleaning.jpg');"></div>
+      <div class="card-content">
+        <h3>Cleaning</h3>
+        <p>Bathroom, Garden, Full House</p>
+      </div>
+    </div>
+
+    <div class="card image-card" onclick="goToSubcategory('Specialized')">
+      <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=600&q=80');"></div>
+      <div class="card-content">
+        <h3>Specialized</h3>
+        <p>Painting, Waterproofing</p>
+      </div>
+    </div>
+
+  </div>
+  <script>
+    // Simple redirect function
+    function goToSubcategory(group) {
+        window.location.href = `subcategories.html?group=${group}`;
+    }
+  </script>
+</body>
+</html>
