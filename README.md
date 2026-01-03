@@ -23,7 +23,7 @@ A professional, responsive frontend application built to connect local service p
 ## 🚀 How to Run Locally
 1. Clone this repository:
    ```bash
-   git clone [https://github.com/YOUR_USERNAME/book-your-service.git](https://github.com/sankalp2006-maker/book-your-service.git)
+   git clone https://github.com/sankalp2006-maker/book-your-service.git
    
    2. Open the project folder.
 
